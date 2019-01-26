@@ -70,9 +70,9 @@ public class PlayerScript : MonoBehaviour
 			lookingBack = true;
 		}
 
-			if (Input.GetKeyDown(KeyCode.A)){
+			/*if (Input.GetKeyDown(KeyCode.A)){
 				Burp();
-			}
+			}*/
 		if (lookingFront == true){
 				
 				if (Input.GetKeyDown(KeyCode.Z) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null){

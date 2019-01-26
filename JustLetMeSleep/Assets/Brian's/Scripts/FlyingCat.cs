@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlyingCat : MonoBehaviour
 {
+    public CatScoreScript catscore;
 	public float traXMax;
 	public float traX;
 	public float traXMin;
@@ -35,6 +36,8 @@ public class FlyingCat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
 		traX = Random.Range(traXMin,traXMax);
 		traY = Random.Range(traYMin,traYMax);
 		traZ = Random.Range(traZMin,traZMax);
@@ -44,6 +47,8 @@ public class FlyingCat : MonoBehaviour
 		rotZ = Random.Range(rotZMin,rotZMax);
 
 		StartCoroutine(TimeToDestruction());
+        catscore = FindObjectOfType<CatScoreScript>();
+        catscore.AddScore(1);
     }
 
     // Update is called once per frame
