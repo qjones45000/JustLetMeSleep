@@ -107,60 +107,59 @@ ModelImporter:
     100202: CC_Base_R_Finger42
     100204: CC_Base_R_Finger4Nub
     100206: CC_Base_R_Foot
-    100208: CC_Base_R_Forearm
-    100210: CC_Base_R_ForearmTwist01
-    100212: CC_Base_R_ForearmTwist02
-    100214: CC_Base_R_Hand
-    100216: CC_Base_R_Hip0
-    100218: CC_Base_R_Hip0Nub
-    100220: CC_Base_R_Knee
-    100222: CC_Base_R_Ribs
-    100224: CC_Base_R_RibsNub
-    100226: CC_Base_R_RibsTwist
-    100228: CC_Base_R_Thigh
-    100230: CC_Base_R_ThighTwist01
-    100232: CC_Base_R_ThighTwist02
-    100234: CC_Base_R_Toe00
-    100236: CC_Base_R_Toe00Nub
-    100238: CC_Base_R_Toe10
-    100240: CC_Base_R_Toe10Nub
-    100242: CC_Base_R_Toe20
-    100244: CC_Base_R_Toe20Nub
-    100246: CC_Base_R_Toe30
-    100248: CC_Base_R_Toe30Nub
-    100250: CC_Base_R_Toe40
-    100252: CC_Base_R_Toe40Nub
-    100254: CC_Base_R_ToeBase
-    100256: CC_Base_R_ToeBaseShareBone
-    100258: CC_Base_R_Upperarm
-    100260: CC_Base_R_UpperarmTwist01
-    100262: CC_Base_R_UpperarmTwist02
-    100264: CC_Base_Spine01
-    100266: CC_Base_Spine02
-    100268: CC_Base_Teeth
-    100270: CC_Base_Teeth01
-    100272: CC_Base_Teeth02
-    100274: CC_Base_Tongue
-    100276: CC_Base_Tongue01
-    100278: CC_Base_Tongue02
-    100280: CC_Base_Tongue03
-    100282: CC_Base_Tongue03Nub
-    100284: CC_Base_UpperJaw
-    100286: CC_Base_Waist
-    100288: Classic Shorts
-    100290: Dummy
-    100292: Dummy 1
-    100294: Dummy_S
-    100296: Dummy_Transform
-    100298: Dummy_Transform 1
+    100208: CC_Base_R_ForearmTwist01
+    100210: CC_Base_R_ForearmTwist02
+    100212: CC_Base_R_Hand
+    100214: CC_Base_R_Hip0
+    100216: CC_Base_R_Hip0Nub
+    100218: CC_Base_R_Knee
+    100220: CC_Base_R_Ribs
+    100222: CC_Base_R_RibsNub
+    100224: CC_Base_R_RibsTwist
+    100226: CC_Base_R_Thigh
+    100228: CC_Base_R_ThighTwist01
+    100230: CC_Base_R_ThighTwist02
+    100232: CC_Base_R_Toe00
+    100234: CC_Base_R_Toe00Nub
+    100236: CC_Base_R_Toe10
+    100238: CC_Base_R_Toe10Nub
+    100240: CC_Base_R_Toe20
+    100242: CC_Base_R_Toe20Nub
+    100244: CC_Base_R_Toe30
+    100246: CC_Base_R_Toe30Nub
+    100248: CC_Base_R_Toe40
+    100250: CC_Base_R_Toe40Nub
+    100252: CC_Base_R_ToeBase
+    100254: CC_Base_R_ToeBaseShareBone
+    100256: CC_Base_R_Upperarm
+    100258: CC_Base_R_UpperarmTwist01
+    100260: CC_Base_R_UpperarmTwist02
+    100262: CC_Base_Spine01
+    100264: CC_Base_Spine02
+    100266: CC_Base_Teeth
+    100268: CC_Base_Teeth01
+    100270: CC_Base_Teeth02
+    100272: CC_Base_Tongue
+    100274: CC_Base_Tongue01
+    100276: CC_Base_Tongue02
+    100278: CC_Base_Tongue03
+    100280: CC_Base_Tongue03Nub
+    100282: CC_Base_UpperJaw
+    100284: CC_Base_Waist
+    100286: Classic Shorts
+    100288: Dummy
+    100290: Dummy 1
+    100292: Dummy_S
+    100294: Dummy_Transform
+    100296: Dummy_Transform 1
+    100298: ereew
     100300: Flip-flops
     100302: Hair
     100304: Hair_M01
     100306: Hair_M01 1
     100308: Hair_M01 2
-    100310: Plane001
-    100312: //RootNode
-    100314: Tank top
+    100310: //RootNode
+    100312: Tank top
     400000: _Object_Pivot_Node_
     400002: CC_Base_Body
     400004: CC_Base_BoneRoot
@@ -265,60 +264,59 @@ ModelImporter:
     400202: CC_Base_R_Finger42
     400204: CC_Base_R_Finger4Nub
     400206: CC_Base_R_Foot
-    400208: CC_Base_R_Forearm
-    400210: CC_Base_R_ForearmTwist01
-    400212: CC_Base_R_ForearmTwist02
-    400214: CC_Base_R_Hand
-    400216: CC_Base_R_Hip0
-    400218: CC_Base_R_Hip0Nub
-    400220: CC_Base_R_Knee
-    400222: CC_Base_R_Ribs
-    400224: CC_Base_R_RibsNub
-    400226: CC_Base_R_RibsTwist
-    400228: CC_Base_R_Thigh
-    400230: CC_Base_R_ThighTwist01
-    400232: CC_Base_R_ThighTwist02
-    400234: CC_Base_R_Toe00
-    400236: CC_Base_R_Toe00Nub
-    400238: CC_Base_R_Toe10
-    400240: CC_Base_R_Toe10Nub
-    400242: CC_Base_R_Toe20
-    400244: CC_Base_R_Toe20Nub
-    400246: CC_Base_R_Toe30
-    400248: CC_Base_R_Toe30Nub
-    400250: CC_Base_R_Toe40
-    400252: CC_Base_R_Toe40Nub
-    400254: CC_Base_R_ToeBase
-    400256: CC_Base_R_ToeBaseShareBone
-    400258: CC_Base_R_Upperarm
-    400260: CC_Base_R_UpperarmTwist01
-    400262: CC_Base_R_UpperarmTwist02
-    400264: CC_Base_Spine01
-    400266: CC_Base_Spine02
-    400268: CC_Base_Teeth
-    400270: CC_Base_Teeth01
-    400272: CC_Base_Teeth02
-    400274: CC_Base_Tongue
-    400276: CC_Base_Tongue01
-    400278: CC_Base_Tongue02
-    400280: CC_Base_Tongue03
-    400282: CC_Base_Tongue03Nub
-    400284: CC_Base_UpperJaw
-    400286: CC_Base_Waist
-    400288: Classic Shorts
-    400290: Dummy
-    400292: Dummy 1
-    400294: Dummy_S
-    400296: Dummy_Transform
-    400298: Dummy_Transform 1
+    400208: CC_Base_R_ForearmTwist01
+    400210: CC_Base_R_ForearmTwist02
+    400212: CC_Base_R_Hand
+    400214: CC_Base_R_Hip0
+    400216: CC_Base_R_Hip0Nub
+    400218: CC_Base_R_Knee
+    400220: CC_Base_R_Ribs
+    400222: CC_Base_R_RibsNub
+    400224: CC_Base_R_RibsTwist
+    400226: CC_Base_R_Thigh
+    400228: CC_Base_R_ThighTwist01
+    400230: CC_Base_R_ThighTwist02
+    400232: CC_Base_R_Toe00
+    400234: CC_Base_R_Toe00Nub
+    400236: CC_Base_R_Toe10
+    400238: CC_Base_R_Toe10Nub
+    400240: CC_Base_R_Toe20
+    400242: CC_Base_R_Toe20Nub
+    400244: CC_Base_R_Toe30
+    400246: CC_Base_R_Toe30Nub
+    400248: CC_Base_R_Toe40
+    400250: CC_Base_R_Toe40Nub
+    400252: CC_Base_R_ToeBase
+    400254: CC_Base_R_ToeBaseShareBone
+    400256: CC_Base_R_Upperarm
+    400258: CC_Base_R_UpperarmTwist01
+    400260: CC_Base_R_UpperarmTwist02
+    400262: CC_Base_Spine01
+    400264: CC_Base_Spine02
+    400266: CC_Base_Teeth
+    400268: CC_Base_Teeth01
+    400270: CC_Base_Teeth02
+    400272: CC_Base_Tongue
+    400274: CC_Base_Tongue01
+    400276: CC_Base_Tongue02
+    400278: CC_Base_Tongue03
+    400280: CC_Base_Tongue03Nub
+    400282: CC_Base_UpperJaw
+    400284: CC_Base_Waist
+    400286: Classic Shorts
+    400288: Dummy
+    400290: Dummy 1
+    400292: Dummy_S
+    400294: Dummy_Transform
+    400296: Dummy_Transform 1
+    400298: ereew
     400300: Flip-flops
     400302: Hair
     400304: Hair_M01
     400306: Hair_M01 1
     400308: Hair_M01 2
-    400310: Plane001
-    400312: //RootNode
-    400314: Tank top
+    400310: //RootNode
+    400312: Tank top
     2100000: Skin_Body
     2100002: Skin_Head
     2100004: Eyelash
@@ -335,9 +333,6 @@ ModelImporter:
     2100026: RL_Hair
     2100028: Standard_7
     2100030: Dummy
-    2100032: No Name
-    2300000: Plane001
-    3300000: Plane001
     4300000: CC_Base_Body
     4300002: CC_Base_Tongue
     4300004: CC_Base_Teeth
@@ -348,7 +343,6 @@ ModelImporter:
     4300014: Hair_M01
     4300016: Dummy_Transform
     4300018: Dummy
-    4300020: Plane001
     7400000: Take 001
     9500000: //RootNode
     13700000: CC_Base_Body
@@ -381,7 +375,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -438,10 +432,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
