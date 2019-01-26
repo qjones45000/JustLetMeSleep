@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class WeatherTimerScript : MonoBehaviour
 {
-    //insert rain effect here
     public ParticleSystem rain;
     int rainChance = 2;
     int pickrand;
-    void Start()
-    {
-        
-    }
     void Update()
     {
         InvokeRepeating("pickWeather", 5, 20);
@@ -21,8 +16,13 @@ public class WeatherTimerScript : MonoBehaviour
          pickrand = Random.Range(0, 10);
         if (pickrand == rainChance)
         {
-            // put rain effect activation here
+            rain.Play();
             rain.enableEmission = true;
+        }
+        else
+        {
+            rain.Stop();
+            rain.enableEmission = false;
         }
     }
 }
