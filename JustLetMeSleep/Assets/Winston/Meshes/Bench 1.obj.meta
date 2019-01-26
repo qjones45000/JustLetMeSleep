@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b680f845a647cce4097886f75126640c
+guid: b5b48f927a8154b49aa79ee5c1c5a1da
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -23,18 +23,15 @@ ModelImporter:
     400014: Box010
     400016: Plane003
     400018: Plane004
-    2100000: wire_135006006
-    2100002: wire_088199225
-    2100004: wire_177088027
-    2100006: Box002Mat
-    2100008: Box003Mat
-    2100010: Box004Mat
-    2100012: Box007Mat
-    2100014: Box008Mat
-    2100016: Box009Mat
-    2100018: Box010Mat
-    2100020: Plane003Mat
-    2100022: Plane004Mat
+    2100000: Box002Mat
+    2100002: Box003Mat
+    2100004: Box004Mat
+    2100006: Box007Mat
+    2100008: Box008Mat
+    2100010: Box009Mat
+    2100012: Box010Mat
+    2100014: Plane003Mat
+    2100016: Plane004Mat
     2300000: Box002
     2300002: Box003
     2300004: Box004
