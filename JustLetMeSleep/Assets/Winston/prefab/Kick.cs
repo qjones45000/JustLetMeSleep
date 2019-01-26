@@ -29,5 +29,19 @@ public class Kick : MonoBehaviour {
 
 			anim.Play ("Punch");
 		}
+
+
+		if (Input.GetKeyDown ("l")) 
+		{
+			anim.Play ("Flip");
+		}
+
+		if (Input.GetKeyDown("l"))
+		{
+			anim.Play ("Flip 2");
+			
+		}
+
 	}
+
 }
