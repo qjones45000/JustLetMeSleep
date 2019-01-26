@@ -18,11 +18,11 @@ public class GasMeterScript : MonoBehaviour
         {
             gasMeter.value += 1 * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.A) && gasMeter.value >= 40)
+        if (Input.GetKeyDown(KeyCode.A) && gasMeter.value >= 40)
         {
             gasMeter.value -= 40;
         }
-        if (Input.GetKey(KeyCode.D) && gasMeter.value >= 10)
+        if (Input.GetKeyDown(KeyCode.D) && gasMeter.value >= 10)
         {
             gasMeter.value -= 10;
         }

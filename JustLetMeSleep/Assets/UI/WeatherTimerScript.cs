@@ -4,25 +4,37 @@ using UnityEngine;
 
 public class WeatherTimerScript : MonoBehaviour
 {
-    public ParticleSystem rain;
+    public GameObject rain;
     int rainChance = 2;
     int pickrand;
+    bool raining;
+    void Start()
+    {
+        raining = false;
+        InvokeRepeating("PickWeather", 1, 10);
+    }
     void Update()
     {
-        InvokeRepeating("pickWeather", 5, 20);
+        
     }
     void PickWeather()
     {
-         pickrand = Random.Range(0, 10);
+        pickrand = Random.Range(0, 3);
+        Debug.Log(pickrand);
         if (pickrand == rainChance)
         {
-            rain.Play();
-            rain.enableEmission = true;
-        }
-        else
-        {
-            rain.Stop();
-            rain.enableEmission = false;
+            if (raining == true)
+            {
+                rain.SetActive(false);
+                Debug.Log("not raining!");
+                raining = false;
+            }
+            else if (raining == false)
+            {
+                rain.SetActive(true);
+                Debug.Log("raining!");
+                raining = true;
+            }
         }
     }
 }

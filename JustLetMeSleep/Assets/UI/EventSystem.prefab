@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4295873401261589708}
   - component: {fileID: 4295873401261589705}
   - component: {fileID: 4295873401261589704}
+  - component: {fileID: 2356753963932627163}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -95,3 +96,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
   score: 0
+--- !u!114 &2356753963932627163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4295873401261589709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ff754ec5efa6c44b63d96507379519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rain: {fileID: 0}
