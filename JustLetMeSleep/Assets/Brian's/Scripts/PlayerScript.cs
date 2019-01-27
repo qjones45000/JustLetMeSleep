@@ -59,6 +59,10 @@ public class PlayerScript : MonoBehaviour
             // load the same scene
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SceneManager.LoadScene(0);
+        }
         if (dead == false){
 		if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.z == 0 && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg == null && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm == null){
 			//transform.Rotate(0,180,0);
