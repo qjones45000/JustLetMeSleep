@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class GasMeterScript : MonoBehaviour
 {
+    public GameObject fart;
+    public GameObject burp;
     public PlayerScript myPlayer;
     float startingGas = 0;
     float maxGas = 100;
     public Slider gasMeter;
+    bool burping;
+    bool farting;
     void Start()
     {
         myPlayer = FindObjectOfType<PlayerScript>();
@@ -23,12 +27,37 @@ public class GasMeterScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A) && gasMeter.value >= 40)
         {
             gasMeter.value -= 40;
-            //myPlayer.GetComponent<PlayerScript>().Fart();
+            myPlayer.GetComponent<PlayerScript>().AssBlast();
+            Debug.Log("FFFFFFFFFFRRRRRRRRT!");
+            fart.SetActive(true);
+            farting = true;
+            StartCoroutine(deactivate());
         }
         if (Input.GetKeyDown(KeyCode.D) && gasMeter.value >= 10)
         {
             gasMeter.value -= 10;
             myPlayer.GetComponent<PlayerScript>().Burp();
+            burp.SetActive(true);
+            burping = true;
+            Debug.Log("BUUUEEEEEELLLCH!");
+            StartCoroutine(deactivate());
+        }
+    }
+    public IEnumerator deactivate()
+    {
+        if(burping == true)
+        {
+            yield return new WaitForSeconds(2);
+            burp.SetActive(false);
+            burping = false;
+            Debug.Log("belch over");
+        }
+        else if (farting == true)
+        {
+            yield return new WaitForSeconds(8);
+            fart.SetActive(false);
+            farting = false;
+            Debug.Log("fart over");
         }
     }
 }
