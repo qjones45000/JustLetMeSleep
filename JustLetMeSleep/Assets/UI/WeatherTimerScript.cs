@@ -7,7 +7,7 @@ public class WeatherTimerScript : MonoBehaviour
     public GameObject rain;
     int rainChance = 2;
     int pickrand;
-    bool raining;
+    public bool raining;
     void Start()
     {
         raining = false;

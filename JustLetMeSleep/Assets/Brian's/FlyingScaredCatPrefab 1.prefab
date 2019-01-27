@@ -4774,6 +4774,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5924d40781d26de40b7cd84aab0346da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 2673509106036954671, guid: eec00b8dc1c1d104e9e35b13e4fae86f, type: 3}
+  catnoise: {fileID: 8300000, guid: 00f4c43f15fa054499a1e150c7d147d4, type: 3}
+  catscore: {fileID: 0}
   traXMax: 0
   traX: 0
   traXMin: 0

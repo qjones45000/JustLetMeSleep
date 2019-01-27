@@ -18,7 +18,7 @@ public class CatScoreScript : MonoBehaviour
     }
     public void AddScore(int newScoreValue)
     {
-        score = newScoreValue;
+        score += newScoreValue;
         UpdateScore();
     }
 }
