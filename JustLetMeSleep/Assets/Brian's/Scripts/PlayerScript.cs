@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -85,7 +86,17 @@ public class PlayerScript : MonoBehaviour
 			lookingFront = false;
 			lookingBack = true;
 		}
-		if (lookingFront == true){
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                // get the current scene name 
+                string sceneName = SceneManager.GetActiveScene().name;
+
+                // load the same scene
+                SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+            }
+                
+
+            if (lookingFront == true){
 				
 				if (Input.GetKeyDown(KeyCode.C) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null){
                     // call punch animation state from trigger here

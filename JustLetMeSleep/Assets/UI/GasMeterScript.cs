@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GasMeterScript : MonoBehaviour
 {
+    public CameraShake shake;
     public PlayerScript playerRef;
     public AudioSource audio;
     public AudioClip burpnoise;
@@ -19,6 +20,7 @@ public class GasMeterScript : MonoBehaviour
     bool farting;
     void Start()
     {
+        shake = FindObjectOfType<CameraShake>();
         myPlayer = FindObjectOfType<PlayerScript>();
         gasMeter.value = startingGas;
     }
@@ -42,6 +44,7 @@ public class GasMeterScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && gasMeter.value >= 10 && playerRef.dead == false)
         {
             gasMeter.value -= 10;
+            shake.shakecamera();
             myPlayer.GetComponent<PlayerScript>().Burp();
             burp.SetActive(true);
             burping = true;
@@ -56,6 +59,7 @@ public class GasMeterScript : MonoBehaviour
         if(burping == true)
         {
             yield return new WaitForSeconds(2);
+            shake.shaketrue = false;
             burp.SetActive(false);
             burping = false;
             Debug.Log("belch over");

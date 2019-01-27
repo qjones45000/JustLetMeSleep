@@ -6316,7 +6316,7 @@ PrefabInstance:
     - target: {fileID: 2673509106036954671, guid: eec00b8dc1c1d104e9e35b13e4fae86f,
         type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2673509106036954671, guid: eec00b8dc1c1d104e9e35b13e4fae86f,
         type: 3}
@@ -6385,6 +6385,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eec00b8dc1c1d104e9e35b13e4fae86f, type: 3}
+--- !u!82 &1069284229 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2673509106036954671, guid: eec00b8dc1c1d104e9e35b13e4fae86f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1069284228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1069368855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3569157830751999645, guid: be18c6a59e04b024dae489290cf41aed,
@@ -6402,6 +6408,7 @@ GameObject:
   - component: {fileID: 1091439155}
   - component: {fileID: 1091439154}
   - component: {fileID: 1091439153}
+  - component: {fileID: 1091439156}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6473,6 +6480,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091439156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091439152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02da3c01ec420cf4592e78821cea020c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 1091439155}
+  shakeDuration: 0.1
+  shakeAmount: 0.7
+  decreaseFactor: 1
+  shaketrue: 0
 --- !u!1001 &1092132629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7054,13 +7078,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353999811}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5862a351eacf4604fb3e276b38ddb4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicClip: {fileID: 0}
-  musicSource: {fileID: 0}
+  bg1: {fileID: 8300000, guid: edac0e8813750c44592f61710a8492f5, type: 3}
+  bg2: {fileID: 0}
+  musicSource: {fileID: 1069284229}
 --- !u!1 &1372064182
 GameObject:
   m_ObjectHideFlags: 0

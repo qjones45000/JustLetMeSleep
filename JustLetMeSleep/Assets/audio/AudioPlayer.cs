@@ -29,11 +29,11 @@ public class AudioPlayer : MonoBehaviour
         Debug.Log(pickrand);
         if (pickrand == bgChance)
         {
-            musicSource = bg2;
+            musicSource.clip = bg2;
         }
         else
         {
-            musicSource = bg1;
+            musicSource.clip = bg1;
         }
     }
 }
