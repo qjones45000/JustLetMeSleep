@@ -37,8 +37,7 @@ public class FlyingCat : MonoBehaviour
     void Start()
     {
 
-
-		traX = Random.Range(traXMin,traXMax);
+        traX = Random.Range(traXMin,traXMax);
 		traY = Random.Range(traYMin,traYMax);
 		traZ = Random.Range(traZMin,traZMax);
 
@@ -54,17 +53,17 @@ public class FlyingCat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		
-
-		transform.Translate(traX,traY,traZ);
+        transform.Translate(traX,traY,traZ);
 		transform.Rotate(rotX,rotY,rotZ);
     }
 
-	public IEnumerator TimeToDestruction(){
+	public IEnumerator TimeToDestruction()
+    {
 		yield return new WaitForSeconds(deathTime);
-		if (blowsUp == true){
-		Instantiate (boomFX, gameObject.transform.position, gameObject.transform.rotation);
+		if (blowsUp == true)
+        {
+		    Instantiate (boomFX, gameObject.transform.position, gameObject.transform.rotation);
 		}
-		Destroy(gameObject);
+        Destroy(gameObject);
 	}
 }
