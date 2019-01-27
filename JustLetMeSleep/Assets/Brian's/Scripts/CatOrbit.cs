@@ -5,6 +5,8 @@ using UnityEngine;
 public class CatOrbit : MonoBehaviour
 {
 
+    public PlayerScript playerRef;
+
 	public GameObject catRef;
 
 	public GameObject spawnPoint;
@@ -31,6 +33,7 @@ public class CatOrbit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerRef = FindObjectOfType<PlayerScript>();
         weatherRef = FindObjectOfType<WeatherTimerScript>();
 		StartCoroutine(CatSpawnProcess());
 		rotSpeed = 1f;
@@ -53,7 +56,10 @@ public class CatOrbit : MonoBehaviour
             spawnMin = baseMin;
             spawnMax = baseMax;
         }
-        rotSpeed += 0.001f;
+        if (playerRef.dead == false)
+        {
+            rotSpeed += 0.0001f;
+        }
 		if (baseMin >= 0){
 			baseMin -= 0.01f;
 		}
