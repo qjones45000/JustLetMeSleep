@@ -38,23 +38,30 @@ public class CatJumpOnBenchTrigger : MonoBehaviour
 		}
 
 		myInt = Random.Range(1,3);
-
-		if (playerRef.GetComponent<PlayerScript>().lookingFront == true){
-			if (isFront == true){
-			playerLookingAway = false;
-			}
-			if (isBack == true){
-				playerLookingAway = true;
-			}
-		}
-		if (playerRef.GetComponent<PlayerScript>().lookingBack == true){
-			if (isBack == true){
-				playerLookingAway = false;
-			}
-			if (isFront == true){
-				playerLookingAway = true;
-			}
-		}
+       
+            if (playerRef.GetComponent<PlayerScript>().lookingFront)
+            {
+                if (isFront == true)
+                {
+                    playerLookingAway = false;
+                }
+                if (isBack == true)
+                {
+                    playerLookingAway = true;
+                }
+            }
+            if (playerRef.GetComponent<PlayerScript>().lookingBack == true)
+            {
+                if (isBack == true)
+                {
+                    playerLookingAway = false;
+                }
+                if (isFront == true)
+                {
+                    playerLookingAway = true;
+                }
+            }
+        
 
 		if (isActive == false && activating == false){
 			activating = true;
@@ -73,7 +80,8 @@ public class CatJumpOnBenchTrigger : MonoBehaviour
     }
 
 	public void OnTriggerEnter(Collider other){
-		if (other.gameObject.tag == "CatTag" && playerLookingAway == true && isActive == true){
+		if (other.gameObject.tag == "CatTag" && playerLookingAway == true && isActive == true && playerRef.GetComponent<PlayerScript>().hasFarted == false)
+        {
 			
 			GameObject newCat;
 			newCat = other.gameObject;

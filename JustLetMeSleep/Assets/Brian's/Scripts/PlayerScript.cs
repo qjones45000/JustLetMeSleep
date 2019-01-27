@@ -24,6 +24,8 @@ public class PlayerScript : MonoBehaviour
 	public GameObject[] cats;
 	public GameObject flyingCatRef;
 	public GameObject spookedCat;
+
+    public bool hasFarted;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,9 +72,9 @@ public class PlayerScript : MonoBehaviour
 			lookingBack = true;
 		}
 
-			if (Input.GetKeyDown(KeyCode.A)){
+			/*if (Input.GetKeyDown(KeyCode.A)){
 				Burp();
-			}
+			}*/
 		if (lookingFront == true){
 				
 				if (Input.GetKeyDown(KeyCode.Z) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null){
@@ -128,6 +130,7 @@ public class PlayerScript : MonoBehaviour
 		catOrbit.GetComponent<CatOrbit>().myCats.Remove (catOrbit.GetComponent<CatOrbit>().myCats [0]);
 		Burp ();
 	}
+    
 	if(catOrbit.GetComponent<CatOrbit>().myCats.Count > 0 && catOrbit.GetComponent<CatOrbit>().myCats[0] != null){
 			Destroy(catOrbit.GetComponent<CatOrbit>().myCats[0]);
 		GameObject scaredCat;
@@ -139,7 +142,18 @@ public class PlayerScript : MonoBehaviour
 	}
 
 	}
-
+    public void AssBlast()
+    {
+        hasFarted = true;
+        Debug.Log("Ass has blasted");
+        StartCoroutine(FartEffectTime());
+    }
+    public IEnumerator FartEffectTime()
+    {
+        yield return new WaitForSeconds(8);
+        hasFarted = false;
+        Debug.Log("Blast of ass has dissipated");
+    }
 
 
 	public void pushedOffFront(){

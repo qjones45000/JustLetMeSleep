@@ -19,25 +19,49 @@ public class CatOrbit : MonoBehaviour
 
 	public float spawnMin;
 	public float spawnMax;
+
+    public float baseMin;
+    public float baseMax;
+
+    public float rainMin;
+    public float rainMax;
+
+
+    public WeatherTimerScript weatherRef;
     // Start is called before the first frame update
     void Start()
     {
+        weatherRef = FindObjectOfType<WeatherTimerScript>();
 		StartCoroutine(CatSpawnProcess());
 		rotSpeed = 1f;
-		spawnMin = 2;
-		spawnMax = 5;
+		baseMin = 2;
+		baseMax = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
-		rotSpeed += 0.001f;
-		if (spawnMin >= 0){
-			spawnMin -= 0.01f;
+
+
+        if (weatherRef.raining == true)
+        {
+            spawnMin = rainMin;
+            spawnMax = rainMax;
+        }
+        if (weatherRef.raining == false)
+        {
+            spawnMin = baseMin;
+            spawnMax = baseMax;
+        }
+        rotSpeed += 0.001f;
+		if (baseMin >= 0){
+			baseMin -= 0.01f;
 		}
-		if (spawnMax >= 1){
-			spawnMax -= 0.0001f;
+		if (baseMax >= 1){
+			baseMax -= 0.0001f;
 		}
+        rainMin = baseMin * 2;
+        rainMax = baseMax * 2;
 		transform.Rotate(0,rotSpeed,0);
 //		if (Input.GetKeyDown(KeyCode.Space)){
 //			var myNewCat = Instantiate (catRef, spawnPoint.transform.position, spawnPoint.transform.rotation);
