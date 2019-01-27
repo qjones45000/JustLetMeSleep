@@ -51,7 +51,15 @@ public class PlayerScript : MonoBehaviour
 
 	void Update(){
 		timeBar.value = pushedOffIn;
-		if (dead == false){
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // get the current scene name 
+            string sceneName = SceneManager.GetActiveScene().name;
+
+            // load the same scene
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        }
+        if (dead == false){
 		if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.z == 0 && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg == null && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm == null){
 			//transform.Rotate(0,180,0);
 			//transform.Translate(0,0,-1);
@@ -86,14 +94,6 @@ public class PlayerScript : MonoBehaviour
 			lookingFront = false;
 			lookingBack = true;
 		}
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                // get the current scene name 
-                string sceneName = SceneManager.GetActiveScene().name;
-
-                // load the same scene
-                SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-            }
                 
 
             if (lookingFront == true){

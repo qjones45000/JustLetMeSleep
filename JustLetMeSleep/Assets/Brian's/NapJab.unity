@@ -6316,7 +6316,7 @@ PrefabInstance:
     - target: {fileID: 2673509106036954671, guid: eec00b8dc1c1d104e9e35b13e4fae86f,
         type: 3}
       propertyPath: m_PlayOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2673509106036954671, guid: eec00b8dc1c1d104e9e35b13e4fae86f,
         type: 3}
@@ -7078,13 +7078,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353999811}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5862a351eacf4604fb3e276b38ddb4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bg1: {fileID: 8300000, guid: edac0e8813750c44592f61710a8492f5, type: 3}
-  bg2: {fileID: 0}
+  bg2: {fileID: 8300000, guid: dee033cec19eb924180229b2376690da, type: 3}
   musicSource: {fileID: 1069284229}
 --- !u!1 &1372064182
 GameObject:
