@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GasMeterScript : MonoBehaviour
 {
+    public PlayerScript playerRef;
     public AudioSource audio;
     public AudioClip burpnoise;
     public AudioClip fartnoise;
@@ -27,7 +28,7 @@ public class GasMeterScript : MonoBehaviour
         {
             gasMeter.value += 1 * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.A) && gasMeter.value >= 40)
+        if (Input.GetKeyDown(KeyCode.A) && gasMeter.value >= 40 && playerRef.dead == false)
         {
             gasMeter.value -= 40;
             myPlayer.GetComponent<PlayerScript>().AssBlast();
@@ -38,7 +39,7 @@ public class GasMeterScript : MonoBehaviour
             audio.Play();
             StartCoroutine(deactivate());
         }
-        if (Input.GetKeyDown(KeyCode.D) && gasMeter.value >= 10)
+        if (Input.GetKeyDown(KeyCode.D) && gasMeter.value >= 10 && playerRef.dead == false)
         {
             gasMeter.value -= 10;
             myPlayer.GetComponent<PlayerScript>().Burp();
