@@ -28,7 +28,7 @@ public class GasMeterScript : MonoBehaviour
         {
             gasMeter.value += 1 * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.A) && gasMeter.value >= 40 && playerRef.dead == false)
+        if (Input.GetKeyDown(KeyCode.X) && gasMeter.value >= 40 && playerRef.dead == false)
         {
             gasMeter.value -= 40;
             myPlayer.GetComponent<PlayerScript>().AssBlast();
@@ -39,7 +39,7 @@ public class GasMeterScript : MonoBehaviour
             audio.Play();
             StartCoroutine(deactivate());
         }
-        if (Input.GetKeyDown(KeyCode.D) && gasMeter.value >= 10 && playerRef.dead == false)
+        if (Input.GetKeyDown(KeyCode.Z) && gasMeter.value >= 10 && playerRef.dead == false)
         {
             gasMeter.value -= 10;
             myPlayer.GetComponent<PlayerScript>().Burp();

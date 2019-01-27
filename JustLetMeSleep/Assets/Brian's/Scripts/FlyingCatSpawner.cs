@@ -18,9 +18,9 @@ public class FlyingCatSpawner : MonoBehaviour
 	public GameObject backRightSpawn;
 
 	public void Update(){
-		if (Input.GetKeyDown(KeyCode.Space)){
+		/*if (Input.GetKeyDown(KeyCode.Space)){
 			SpawnBackLeft();
-		}
+		}*/
 	}
 
 	public void SpawnFrontLeft(){

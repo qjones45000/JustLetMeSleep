@@ -87,7 +87,7 @@ public class PlayerScript : MonoBehaviour
 		}
 		if (lookingFront == true){
 				
-				if (Input.GetKeyDown(KeyCode.Z) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null){
+				if (Input.GetKeyDown(KeyCode.C) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null){
                     // call punch animation state from trigger here
                     //anim.SetTrigger("punch");
                     audio.clip = meow1;
@@ -96,7 +96,7 @@ public class PlayerScript : MonoBehaviour
                     catOrbit.GetComponent<CatOrbit>().catCount -= 1;
 					flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnFrontLeft();
 			}
-				if (Input.GetKeyDown(KeyCode.X) && backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null){
+				if (Input.GetKeyDown(KeyCode.V) && backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null){
                     // call kick animation state from trigger here
                     //anim.SetTrigger("kick");
                     audio.clip = meow2;
@@ -107,7 +107,7 @@ public class PlayerScript : MonoBehaviour
 			}
 		}
 		if (lookingBack == true){
-				if (Input.GetKeyDown(KeyCode.Z) && backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null)
+				if (Input.GetKeyDown(KeyCode.C) && backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null)
                 {
                     // call punch animation state from trigger here
                     //anim.SetTrigger("punch");
@@ -117,7 +117,7 @@ public class PlayerScript : MonoBehaviour
                     catOrbit.GetComponent<CatOrbit>().catCount -= 1;
 					flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnBackLeft();
 			    }
-				if (Input.GetKeyDown(KeyCode.X) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null){
+				if (Input.GetKeyDown(KeyCode.V) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null){
                     // call kick animation state from trigger here
                     //anim.SetTrigger("kick");
                     audio.clip = meow1;
