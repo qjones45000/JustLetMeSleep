@@ -32,6 +32,7 @@ public class GasMeterScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.X) && gasMeter.value >= 40 && playerRef.dead == false)
         {
+            
             gasMeter.value -= 40;
             myPlayer.GetComponent<PlayerScript>().AssBlast();
             Debug.Log("FFFFFFFFFFRRRRRRRRT!");
@@ -43,6 +44,7 @@ public class GasMeterScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Z) && gasMeter.value >= 10 && playerRef.dead == false)
         {
+            
             gasMeter.value -= 10;
             shake.shakecamera();
             myPlayer.GetComponent<PlayerScript>().Burp();

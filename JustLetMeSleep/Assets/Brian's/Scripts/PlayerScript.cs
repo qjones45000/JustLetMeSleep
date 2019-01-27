@@ -99,43 +99,19 @@ public class PlayerScript : MonoBehaviour
             if (lookingFront == true){
 				
 				if (Input.GetKeyDown(KeyCode.C) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null){
-                    // call punch animation state from trigger here
-                    //anim.SetTrigger("punch");
-                    audio.clip = meow1;
-                    audio.Play();
-                    Destroy(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
-                    catOrbit.GetComponent<CatOrbit>().catCount -= 1;
-					flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnFrontLeft();
+                    DestroyCatFrontLeft();
 			}
 				if (Input.GetKeyDown(KeyCode.V) && backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null){
-                    // call kick animation state from trigger here
-                    //anim.SetTrigger("kick");
-                    audio.clip = meow2;
-                    audio.Play();
-                    Destroy(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
-                    catOrbit.GetComponent<CatOrbit>().catCount -= 1;
-					flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnBackRight();
+                    DestroyCatBackRight();
 			}
 		}
 		if (lookingBack == true){
 				if (Input.GetKeyDown(KeyCode.C) && backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null)
                 {
-                    // call punch animation state from trigger here
-                    //anim.SetTrigger("punch");
-                    audio.clip = meow3;
-                    audio.Play();
-                    Destroy(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
-                    catOrbit.GetComponent<CatOrbit>().catCount -= 1;
-					flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnBackLeft();
+                    DestroyCatBackLeft();
 			    }
 				if (Input.GetKeyDown(KeyCode.V) && frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null){
-                    // call kick animation state from trigger here
-                    //anim.SetTrigger("kick");
-                    audio.clip = meow1;
-                    audio.Play();
-                    Destroy(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
-                    catOrbit.GetComponent<CatOrbit>().catCount -= 1;
-					flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnFrontRight();
+                    DestroyCatFrontRight();
 			}
 		}
 
@@ -164,7 +140,35 @@ public class PlayerScript : MonoBehaviour
         }
 	}
 	public void Burp(){
-	if(catOrbit.GetComponent<CatOrbit>().myCats.Count > 0 && catOrbit.GetComponent<CatOrbit>().myCats[0] == null){
+        /*if (frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null)
+        {
+            catOrbit.GetComponent<CatOrbit>().myCats.Remove(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
+            Destroy(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
+            catOrbit.GetComponent<CatOrbit>().catCount -= 1;
+
+        }
+        if (backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null)
+        {
+            catOrbit.GetComponent<CatOrbit>().myCats.Remove(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
+            Destroy(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
+            catOrbit.GetComponent<CatOrbit>().catCount -= 1;
+
+        }
+        if (backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null)
+        {
+            catOrbit.GetComponent<CatOrbit>().myCats.Remove(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
+            Destroy(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
+            catOrbit.GetComponent<CatOrbit>().catCount -= 1;
+
+        }
+        if (frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null)
+        {
+            catOrbit.GetComponent<CatOrbit>().myCats.Remove(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
+            Destroy(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
+            catOrbit.GetComponent<CatOrbit>().catCount -= 1;
+            
+        }*/
+        if (catOrbit.GetComponent<CatOrbit>().myCats.Count > 0 && catOrbit.GetComponent<CatOrbit>().myCats[0] == null){
 
 		catOrbit.GetComponent<CatOrbit>().myCats.Remove (catOrbit.GetComponent<CatOrbit>().myCats [0]);
 		Burp ();
@@ -184,6 +188,26 @@ public class PlayerScript : MonoBehaviour
 	}
     public void AssBlast()
     {
+        if (frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null)
+        {
+            DestroyCatFrontLeft();
+            
+        }
+        if (backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null)
+        {
+            DestroyCatBackRight();
+            
+        }
+        if (backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm != null)
+        {
+            DestroyCatBackLeft();
+            
+        }
+        if (frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg != null)
+        {
+            DestroyCatFrontRight();
+            
+        }
         hasFarted = true;
         Debug.Log("Ass has blasted");
         StartCoroutine(FartEffectTime());
@@ -205,7 +229,49 @@ public class PlayerScript : MonoBehaviour
 		transform.rotation = Quaternion.Euler(-180,103,-85);
 	}
 
-
-
+    public void DestroyCatBackLeft()
+    {
+        // call punch animation state from trigger here
+        //anim.SetTrigger("punch");
+        audio.clip = meow3;
+        audio.Play();
+        catOrbit.GetComponent<CatOrbit>().myCats.Remove(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
+        Destroy(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
+        catOrbit.GetComponent<CatOrbit>().catCount -= 1;
+        flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnBackLeft();
+    }
+    public void DestroyCatBackRight()
+    {
+        // call kick animation state from trigger here
+        //anim.SetTrigger("kick");
+        audio.clip = meow2;
+        audio.Play();
+        catOrbit.GetComponent<CatOrbit>().myCats.Remove(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
+        Destroy(backSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
+        catOrbit.GetComponent<CatOrbit>().catCount -= 1;
+        flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnBackRight();
+    }
+    public void DestroyCatFrontLeft()
+    {
+        // call punch animation state from trigger here
+        //anim.SetTrigger("punch");
+        audio.clip = meow1;
+        audio.Play();
+        catOrbit.GetComponent<CatOrbit>().myCats.Remove(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
+        Destroy(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesArm);
+        catOrbit.GetComponent<CatOrbit>().catCount -= 1;
+        flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnFrontLeft();
+    }
+    public void DestroyCatFrontRight()
+    {
+        // call kick animation state from trigger here
+        //anim.SetTrigger("kick");
+        audio.clip = meow1;
+        audio.Play();
+        catOrbit.GetComponent<CatOrbit>().myCats.Remove(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
+        Destroy(frontSide.GetComponent<CatJumpOnBenchTrigger>().occupiesLeg);
+        catOrbit.GetComponent<CatOrbit>().catCount -= 1;
+        flyingCatSpawner.GetComponent<FlyingCatSpawner>().SpawnFrontRight();
+    }
 
 }

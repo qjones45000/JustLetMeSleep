@@ -488,24 +488,26 @@ MonoBehaviour:
     CONTROLS:
 
 
+    Up and Down Arrows: Roll between lanes on your bench
+
     C: Punch Forward
 
     V: Kick Behind you
 
-    Z: Fart
+    Z: Fart and keep cats off your home bench
 
-    X: Belch
+    X: Belch and spook surrounding cats
 
     R: Quick Reset
 
     ESC: Return to menu
 
 
-    cats are constantly sneaking up behind you
+    Cats are constantly sneaking up behind you
 
-    and spook very easily,
+    and spook very easily.
 
-    punch and kick them off your bench, and scare them away
+    Punch and kick them off your bench, and scare them away
 
     with your stench!'
 --- !u!222 &310404154

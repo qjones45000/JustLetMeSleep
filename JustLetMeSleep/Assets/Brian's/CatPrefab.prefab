@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6441801566627277400}
   - component: {fileID: 5202642312245374628}
+  - component: {fileID: 8747859271794516631}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -141,3 +142,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8747859271794516631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426523197633359056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bae0d68e34d5fe4fba93dc7574ac5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRenderer: {fileID: 5202642312245374628}
+  furColor: {r: 0, g: 0, b: 0, a: 0}
+  randomInt: 0
+  color1: {r: 0.5377358, g: 0.1918533, b: 0.13950695, a: 1}
+  color2: {r: 0.6981132, g: 0.59973097, b: 0.49724102, a: 1}
+  color3: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
+  color4: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+  color5: {r: 1, g: 0.65357405, b: 0, a: 1}
